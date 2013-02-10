@@ -1,3 +1,5 @@
+import math
+
 # 001010
 # 001001
 
@@ -7,12 +9,15 @@ def bit_max(x, y):
         return x
     return y
 
-def get_msb(num):
+"""def get_msb(num):
     counter = 0
     while num:
         num >>= 1
         counter += 1
-    return counter
+    return counter"""
+
+def get_msb(num):
+    return int(math.floor(math.log(num, 2))) - 1
 
 if __name__ == '__main__':
     print 'bit_max(10,20):', bit_max(10,20)
